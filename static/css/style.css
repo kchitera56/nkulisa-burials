@@ -246,6 +246,16 @@ h1, h2, h3 {
 }
 
 /* ==========================
+   ABOUT SECTION SVG SIZE ADJUST
+========================== */
+.about .mission-card svg,
+.about .pledge-card svg {
+    width: 80px;    
+    height: 80px;   
+    margin-bottom: 15px;
+}
+
+/* ==========================
    BUTTONS, INPUTS, PACKAGES
 ========================== */
 .packages {
@@ -439,7 +449,8 @@ footer a.whatsapp-link:hover {
         font-size: 1em;
     }
 
-    .mission-card svg, .pledge-card svg {
+    .about .mission-card svg,
+    .about .pledge-card svg {
         width: 50px;
         height: 50px;
     }
