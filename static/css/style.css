@@ -246,15 +246,28 @@ h1, h2, h3 {
 }
 
 /* ==========================
-   MISSION AND PLEDGE ICONS
+   MISSION & PLEDGE CARDS
 ========================== */
-.mission-card svg,
-.pledge-card svg {
-    width: 60px;       /* Icon width */
-    height: 60px;      /* Icon height */
-    display: block;
-    margin: 0 auto 15px auto;
-    stroke-width: 2;   /* Optional: thinner stroke */
+.mission-card, .pledge-card {
+    background: linear-gradient(145deg, #2b1b0f, #3a2615);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: gold;
+}
+
+.mission-card:hover, .pledge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+
+.mission-card svg, .pledge-card svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
 }
 
 /* ==========================
@@ -425,7 +438,8 @@ footer a.whatsapp-link:hover {
         font-size: 1em;
     }
 
-    .support-cards .card svg {
+    .support-cards .card svg,
+    .mission-card svg, .pledge-card svg {
         width: 40px;
         height: 40px;
     }
@@ -449,12 +463,6 @@ footer a.whatsapp-link:hover {
 
     .about-text {
         font-size: 1em;
-    }
-
-    .mission-card svg,
-    .pledge-card svg {
-        width: 40px;
-        height: 40px;
     }
 
     .leader-card img {

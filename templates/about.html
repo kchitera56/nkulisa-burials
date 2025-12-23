@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 {% block content %}
 
 <!-- About Us Section with Parallax -->
@@ -21,7 +22,7 @@
 <!-- Mission Section -->
 <section class="mission container">
     <h2>Our Mission</h2>
-    <div class="mission-card">
+    <div class="mission-card card">
         <svg class="mission-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
             <circle cx="32" cy="32" r="20" stroke="gold" stroke-width="3" fill="none"/>
             <path d="M32 2 L32 62 M2 32 L62 32" stroke="gold" stroke-width="1.5"/>
@@ -35,7 +36,7 @@
 <!-- Pledge Section -->
 <section class="pledge container">
     <h2>Our Pledge</h2>
-    <div class="pledge-card">
+    <div class="pledge-card card">
         <svg class="pledge-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
             <path d="M32 2 C42 12, 42 52, 32 62 C22 52, 22 12, 32 2 Z" stroke="gold" stroke-width="2.5" fill="none"/>
             <circle cx="32" cy="32" r="5" fill="gold"/>
@@ -49,7 +50,7 @@
     <h2>Our Leadership</h2>
     <div class="leaders">
         <!-- Henry Msibi -->
-        <div class="leader-card fade-in">
+        <div class="leader-card fade-in card">
             <img src="{{ url_for('static', filename='images/henry-msibi.jpg') }}" alt="Henry Msibi">
             <h3>Henry Msibi – Board Chairperson</h3>
             <p>
@@ -61,7 +62,7 @@
         </div>
 
         <!-- Nomcebo Mkhonza -->
-        <div class="leader-card fade-in">
+        <div class="leader-card fade-in card">
             <img src="{{ url_for('static', filename='images/nomcebo-mkhonza.jpg') }}" alt="Nomcebo Mkhonza">
             <h3>Nomcebo Mkhonza – Co-Founder & Managing Director</h3>
             <p>
@@ -73,7 +74,7 @@
         </div>
 
         <!-- Sphamandla Hadebe -->
-        <div class="leader-card fade-in">
+        <div class="leader-card fade-in card">
             <img src="{{ url_for('static', filename='images/sphamandla-hadebe.jpg') }}" alt="Sphamandla Hadebe">
             <h3>Sphamandla Hadebe – Executive Advisor</h3>
             <p>
