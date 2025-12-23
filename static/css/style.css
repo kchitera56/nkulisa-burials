@@ -151,58 +151,6 @@ h1, h2, h3 {
 }
 
 /* ==========================
-   SUPPORT / PACKAGES / VALUES / LEADERS
-========================== */
-.support h2, .highlight h2, .about h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-.support-cards, .leaders, .values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.support .card,
-.package-card,
-.leader-card,
-.values .card {
-    background: linear-gradient(145deg, #2b1b0f, #3a2615);
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    opacity: 0;
-    animation: fadeUp 0.8s ease forwards;
-    color: gold;
-}
-
-.support .card:hover,
-.package-card:hover,
-.leader-card:hover,
-.values .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(255,215,0,0.5);
-}
-
-.support .card h3,
-.package-card h3,
-.leader-card h3,
-.values .card h3 {
-    color: gold;
-    margin: 15px 0;
-}
-
-/* Icons styling */
-.card i, .package-card i, .values .card i {
-    color: gold;
-    margin-bottom: 15px;
-}
-
-/* ==========================
    ABOUT US PAGE SPECIFIC
 ========================== */
 .about.parallax {
@@ -268,6 +216,83 @@ h1, h2, h3 {
     width: 50px;
     height: 50px;
     margin-bottom: 15px;
+}
+
+/* ==========================
+   LEADERSHIP CARDS
+========================== */
+.leaders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.leader-card {
+    background: linear-gradient(145deg, #2b1b0f, #3a2615);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leader-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+
+.leader-card img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.leader-card h3 { margin-bottom: 15px; color: gold; }
+
+.leader-card p { color: #fff; line-height: 1.6; }
+
+/* ==========================
+   PARTNERS CARDS
+========================== */
+.partners {
+    text-align: center;
+    padding: 60px 20px;
+    color: gold;
+}
+
+.partners h2 { font-size: 2.5em; margin-bottom: 40px; }
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.partner-card {
+    background: linear-gradient(145deg, #2b1b0f, #3a2615);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+
+.partner-card img { max-width: 120px; height: auto; margin-bottom: 15px; }
+
+.partner-card p {
+    font-size: 1.2em;
+    color: gold;
+    font-weight: bold;
 }
 
 /* ==========================
@@ -468,4 +493,6 @@ footer a.whatsapp-link:hover {
     .leader-card img {
         height: 200px;
     }
+
+    .partners-logos { flex-direction: column; gap: 30px; }
 }
