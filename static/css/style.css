@@ -246,13 +246,14 @@ h1, h2, h3 {
 }
 
 /* ==========================
-   ABOUT SECTION SVG SIZE ADJUST
+   FIX SVG SIZE IN ABOUT SECTION
 ========================== */
 .about .mission-card svg,
 .about .pledge-card svg {
-    width: 80px;    
-    height: 80px;   
-    margin-bottom: 15px;
+    width: 50px !important;
+    height: 50px !important;
+    display: block;
+    margin: 0 auto 15px auto;
 }
 
 /* ==========================
@@ -449,10 +450,9 @@ footer a.whatsapp-link:hover {
         font-size: 1em;
     }
 
-    .about .mission-card svg,
-    .about .pledge-card svg {
-        width: 50px;
-        height: 50px;
+    .mission-card svg, .pledge-card svg {
+        width: 40px !important;
+        height: 40px !important;
     }
 
     .leader-card img {
