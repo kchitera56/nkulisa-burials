@@ -1,0 +1,6 @@
+Flask
+Flask-Mail
+Flask-SQLAlchemy
+firebase-admin
+python-dotenv
+gunicorn

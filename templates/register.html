@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<section class="section register">
+    <h2>Member Registration</h2>
+    <p style="text-align:center; margin-bottom:30px;">
+        Join Nkulisa Burials NPC and secure your funeral cover today.
+    </p>
+
+    <form method="POST" class="register-form">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+
+        <select name="package" required>
+            <option value="">Select Package</option>
+            <option>Individual Cover</option>
+            <option>Single Parent Cover</option>
+            <option>Family Cover</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+{% endblock %}

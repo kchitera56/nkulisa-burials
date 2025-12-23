@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
+
+<!-- About Us Section with Parallax -->
+<section class="about parallax">
+    <div class="overlay"></div>
+    <div class="about-content container">
+        <h2>About Us</h2>
+
+        <p class="about-text">
+            We are a 100% black-owned, 50% youth-led emerging funeral society that offers more than just monetary and affordable, quality burial support. 
+            We aim to provide compassion, emotional and spiritual presence, and a sense of community that combines culture and religion.
+        </p>
+
+        <p class="about-text">
+            Like the Shembe religion, which combines faith and spirituality — with emphasis on culture, we strive to make our members feel at home by offering support rooted in the very essence of what it feels to be African.
+        </p>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="mission container">
+    <h2>Our Mission</h2>
+    <div class="mission-card">
+        <svg class="mission-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <circle cx="32" cy="32" r="20" stroke="gold" stroke-width="3" fill="none"/>
+            <path d="M32 2 L32 62 M2 32 L62 32" stroke="gold" stroke-width="1.5"/>
+        </svg>
+        <p>
+            We are committed to providing dignified, compassionate, and culturally grounded burial support that guides families through loss with clarity and respect. Inspired by the sun rays in our emblem, we strive to be a source of light, direction, and reassurance — offering support that honours tradition, uplifts the community, and preserves the dignity of every life we serve.
+        </p>
+    </div>
+</section>
+
+<!-- Pledge Section -->
+<section class="pledge container">
+    <h2>Our Pledge</h2>
+    <div class="pledge-card">
+        <svg class="pledge-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path d="M32 2 C42 12, 42 52, 32 62 C22 52, 22 12, 32 2 Z" stroke="gold" stroke-width="2.5" fill="none"/>
+            <circle cx="32" cy="32" r="5" fill="gold"/>
+        </svg>
+        <p>To bring forth light and warmth in an environment clouded with darkness.</p>
+    </div>
+</section>
+
+<!-- Leadership Section -->
+<section class="leadership container">
+    <h2>Our Leadership</h2>
+    <div class="leaders">
+        <!-- Henry Msibi -->
+        <div class="leader-card fade-in">
+            <img src="{{ url_for('static', filename='images/henry-msibi.jpg') }}" alt="Henry Msibi">
+            <h3>Henry Msibi – Board Chairperson</h3>
+            <p>
+                Henry Msibi serves as the Board Chairperson of Nkulisa Burials NPC, providing strategic oversight and spiritual guidance to the organisation. 
+                With more than 20 years of leadership experience within the church — including service as an acting reverend, church secretary, and his current role as Chairperson of the Development Committee — he brings a deep understanding of faith-based governance and community engagement.
+                <br><br>
+                In his role at Nkulisa Burials, Henry ensures that the organisation’s practices align with cultural expectations and religious principles, guiding the team in conducting burials with dignity, respect, and adherence to tradition. His steady leadership and extensive pastoral experience support the organisation’s commitment to serving families with integrity and cultural sensitivity.
+            </p>
+        </div>
+
+        <!-- Nomcebo Mkhonza -->
+        <div class="leader-card fade-in">
+            <img src="{{ url_for('static', filename='images/nomcebo-mkhonza.jpg') }}" alt="Nomcebo Mkhonza">
+            <h3>Nomcebo Mkhonza – Co-Founder & Managing Director</h3>
+            <p>
+                Nomcebo Mkhonza is the co-founder and MD of Nkulisa Burials NPC and holds a four-year teaching qualification from the University of the Witwatersrand. 
+                Her background in education has informed her commitment to structure, ethical conduct, and compassionate engagement with the community. 
+                <br><br>
+                Nomcebo plays a key role in ensuring that the organisation delivers dignified, accessible, and reliable burial services to families in and around Newcastle. Through her steady leadership and community-focused approach, she supports the organisation’s mission to provide respectful guidance and dependable service during times of loss.
+            </p>
+        </div>
+
+        <!-- Sphamandla Hadebe -->
+        <div class="leader-card fade-in">
+            <img src="{{ url_for('static', filename='images/sphamandla-hadebe.jpg') }}" alt="Sphamandla Hadebe">
+            <h3>Sphamandla Hadebe – Executive Advisor</h3>
+            <p>
+                Sphamandla Hadebe serves as the Executive Advisor of Nkulisa Burials NPC, providing strategic guidance, compliance oversight, and support in stakeholder engagement. 
+                As a close kin of the Hadebe Royal Family, he brings a deep appreciation for cultural protocols, community structures, and traditional leadership values.
+                <br><br>
+                In his advisory role, Sphamandla strengthens the organisation’s outreach efforts and ensures that community relations are conducted with respect, transparency, and alignment to cultural expectations. 
+                His ability to bridge organisational strategy with community needs contributes significantly to Nkulisa Burials’ commitment to dignified, culturally grounded service.
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

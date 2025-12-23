@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Admin Dashboard</h2>
+
+<table style="width:100%; border-collapse: collapse;">
+    <tr style="color:gold;">
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Package</th>
+    </tr>
+
+    {% for key, member in members.items() %}
+    <tr>
+        <td>{{ member.full_name }}</td>
+        <td>{{ member.email }}</td>
+        <td>{{ member.phone }}</td>
+        <td>{{ member.package }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

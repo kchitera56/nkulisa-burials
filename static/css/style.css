@@ -1,0 +1,450 @@
+/* ========================== 
+   GLOBAL STYLES
+========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ==========================
+   NAVIGATION
+========================== */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1a1a1a;
+    padding: 15px 30px;
+    border-bottom: 2px solid gold;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.logo-container img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: gold;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+.container {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    color: gold;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* ==========================
+   HERO SECTION (PARALLAX)
+========================== */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    background-image: url('../images/logo.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: gold;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px #000;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    font-size: 1.1em;
+    padding: 14px 30px;
+    box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px gold;
+}
+
+/* ==========================
+   SECTION DIVIDER
+========================== */
+.section-divider {
+    border: 0;
+    height: 2px;
+    width: 80px;
+    background: gold;
+    margin: 40px auto;
+    border-radius: 5px;
+}
+
+/* ==========================
+   SUPPORT / PACKAGES / VALUES / LEADERS
+========================== */
+.support h2, .highlight h2, .about h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.support-cards, .leaders, .values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.support .card,
+.package-card,
+.leader-card,
+.values .card {
+    background: linear-gradient(145deg, #2b1b0f, #3a2615);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeUp 0.8s ease forwards;
+    color: gold;
+}
+
+.support .card:hover,
+.package-card:hover,
+.leader-card:hover,
+.values .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,215,0,0.5);
+}
+
+.support .card h3,
+.package-card h3,
+.leader-card h3,
+.values .card h3 {
+    color: gold;
+    margin: 15px 0;
+}
+
+/* Icons styling */
+.card i, .package-card i, .values .card i {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   ABOUT US PAGE SPECIFIC
+========================== */
+.about.parallax {
+    position: relative;
+    background-image: url('../images/logo.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 20px;
+    color: gold;
+}
+
+.about.parallax .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.about-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* ==========================
+   BUTTONS, INPUTS, PACKAGES
+========================== */
+.packages {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.package-card {
+    border: 2px solid gold;
+    font-weight: bold;
+    color: gold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inkomo-discount {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid gold;
+    margin-top: 20px;
+}
+
+.inkomo-discount h2 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.inkomo-discount p {
+    font-size: 1.2em;
+}
+
+button, .btn {
+    background: gold;
+    color: black;
+    padding: 14px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: #b8860b;
+    color: white;
+    box-shadow: 0 0 20px gold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid gold;
+    background: #1a1a1a;
+    color: gold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #b8860b;
+    box-shadow: 0 0 10px rgba(255,215,0,0.5);
+    background: #2b1b0f;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeIn {
+    0% { opacity: 0; transform: scale(0.98);}
+    100% { opacity: 1; transform: scale(1);}
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+    background: #111;
+    padding: 30px 20px;
+    text-align: center;
+    color: #ccc;
+    border-top: 2px solid gold;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+footer a.btn, .footer a.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-right: 15px;
+    font-weight: bold;
+    gap: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+footer a.btn:hover {
+    background: #b8860b;
+    color: white;
+    box-shadow: 0 0 15px gold;
+}
+
+footer a.whatsapp-link {
+    background: #25D366;
+    color: white;
+}
+
+footer a.whatsapp-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #25D366;
+}
+
+.footer-actions svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .support-cards .card svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .packages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-actions {
+        flex-direction: column;
+    }
+
+    .logo-container img {
+        height: 50px;
+    }
+
+    .about h2 {
+        font-size: 2.2em;
+    }
+
+    .about-text {
+        font-size: 1em;
+    }
+
+    .mission-card svg, .pledge-card svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .leader-card img {
+        height: 200px;
+    }
+}

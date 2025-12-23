@@ -1,0 +1,20 @@
+# render.yaml
+services:
+  - type: web
+    name: nkulisa-burials
+    env: python
+    region: oregon   # change if you prefer another region
+    plan: free       # change to 'starter' or 'standard' for more resources
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    autoDeploy: true
+    envVars:
+      - key: SECRET_KEY
+        fromDatabase: false
+        value: "03800378e594afa5c437e33c82a174c0ea6e14e000d4ed79cbaba884bedc2f94"
+      - key: MAIL_USERNAME
+        fromDatabase: false
+        value: "kchitera56@gmail.com"
+      - key: MAIL_PASSWORD
+        fromDatabase: false
+        value: "pfhqnfazeqynhmvd"

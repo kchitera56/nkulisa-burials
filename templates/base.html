@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nkulisa Burials NPC</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-pVhwI3WdK6lDcl/NjzthG8S0+bkFQ1K8sGsmZxyQxLk5tQ36JwD9U5wEMfV+6yVyzlJj+Jr0yKgJP7H+zv2U9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<!-- ==========================
+   NAVIGATION
+========================== -->
+<nav>
+    <a href="/" class="logo-container">
+        <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Nkulisa Logo">
+        <span class="logo-text">Nkulisa Burials NPC</span>
+    </a>
+    <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/about" class="nav-link">About</a>
+        <a href="/contact" class="nav-link">Contact</a>
+        <a href="/register" class="nav-link">Register</a>
+    </div>
+</nav>
+
+<!-- ==========================
+   MAIN CONTENT
+========================== -->
+<div class="container">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% for category, message in messages %}
+            <p style="color:gold;">{{ message }}</p>
+        {% endfor %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</div>
+
+<!-- ==========================
+   FOOTER
+========================== -->
+<footer>
+    <div class="footer-container">
+        <p>© 2026 Nkulisa Burials NPC Company</p>
+        <div class="footer-actions">
+            <a href="/constitution" class="btn">Download Constitution</a>
+            <a href="https://wa.me/27XXXXXXXXX" target="_blank" class="whatsapp-link">
+                <!-- WhatsApp SVG Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24">
+                    <path d="M12.004 2.004c-5.514 0-10 4.486-10 10 0 1.769.464 3.423 1.265 4.851l-1.332 4.869 4.989-1.307c1.392.763 2.969 1.22 4.592 1.22 5.514 0 10-4.486 10-10s-4.486-10-10-10zm5.533 14.44c-.218.61-1.26 1.152-1.737 1.23-.452.075-1.004.108-3.098-.872-2.556-1.1-4.18-3.714-4.304-3.86-.123-.145-1.006-1.423-1.006-2.715 0-1.291.713-1.92.967-2.183.25-.26.543-.33.724-.33.187 0 .364 0 .52.006.164.007.38-.06.595.45.218.518.738 1.793.803 1.93.062.133.104.287.02.465-.086.176-.123.288-.247.445-.123.157-.26.35-.37.47-.123.126-.25.264-.108.52.144.255.637 1.046 1.367 1.693.943.841 1.737 1.09 2.09 1.21.35.124.555.105.76-.063.202-.166.818-.955 1.042-1.288.224-.33.446-.287.74-.172.294.118 1.87.883 2.196 1.043.33.16.552.238.63.37.077.134.077.774-.14 1.386z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
