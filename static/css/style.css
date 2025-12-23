@@ -246,14 +246,15 @@ h1, h2, h3 {
 }
 
 /* ==========================
-   FIX SVG SIZE IN ABOUT SECTION
+   MISSION AND PLEDGE ICONS
 ========================== */
-.about .mission-card svg,
-.about .pledge-card svg {
-    width: 50px !important;
-    height: 50px !important;
+.mission-card svg,
+.pledge-card svg {
+    width: 60px;       /* Icon width */
+    height: 60px;      /* Icon height */
     display: block;
     margin: 0 auto 15px auto;
+    stroke-width: 2;   /* Optional: thinner stroke */
 }
 
 /* ==========================
@@ -450,9 +451,10 @@ footer a.whatsapp-link:hover {
         font-size: 1em;
     }
 
-    .mission-card svg, .pledge-card svg {
-        width: 40px !important;
-        height: 40px !important;
+    .mission-card svg,
+    .pledge-card svg {
+        width: 40px;
+        height: 40px;
     }
 
     .leader-card img {
