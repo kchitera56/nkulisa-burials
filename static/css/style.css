@@ -1,4 +1,4 @@
-/* ==========================  
+/* ========================== 
    GLOBAL STYLES
 ========================== */
 * {
@@ -102,7 +102,8 @@ h1, h2, h3 {
 .hero::before {
     content: "";
     position: absolute;
-    inset: 0;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0,0,0,0.6);
     z-index: 1;
 }
@@ -123,6 +124,18 @@ h1, h2, h3 {
 .hero p {
     font-size: 1.3em;
     margin-bottom: 30px;
+}
+
+.hero-btn {
+    font-size: 1.1em;
+    padding: 14px 30px;
+    box-shadow: 0 5px 15px rgba(255,215,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px gold;
 }
 
 /* ==========================
@@ -183,8 +196,14 @@ h1, h2, h3 {
     margin: 15px 0;
 }
 
+/* Icons styling */
+.card i, .package-card i, .values .card i {
+    color: gold;
+    margin-bottom: 15px;
+}
+
 /* ==========================
-   ABOUT US PAGE
+   ABOUT US PAGE SPECIFIC
 ========================== */
 .about.parallax {
     position: relative;
@@ -199,7 +218,8 @@ h1, h2, h3 {
 
 .about.parallax .overlay {
     position: absolute;
-    inset: 0;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
     background: rgba(0,0,0,0.6);
     z-index: 1;
 }
@@ -212,31 +232,116 @@ h1, h2, h3 {
     text-align: center;
 }
 
+.about h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
 .about-text {
     font-size: 1.2em;
     line-height: 1.8;
+    margin-bottom: 20px;
     color: #fff;
 }
 
 /* ==========================
-   ✅ ABOUT PAGE ONLY – SVG FIX
-   (SAFE & SCOPED)
+   BUTTONS, INPUTS, PACKAGES
 ========================== */
-.about .mission-card svg,
-.about .pledge-card svg {
-    width: 56px;
-    height: 56px;
-    max-width: 56px;
+.packages {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
-/* Mobile only */
-@media (max-width: 768px) {
-    .about .mission-card svg,
-    .about .pledge-card svg {
-        width: 44px;
-        height: 44px;
-        max-width: 44px;
-    }
+.package-card {
+    border: 2px solid gold;
+    font-weight: bold;
+    color: gold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inkomo-discount {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid gold;
+    margin-top: 20px;
+}
+
+.inkomo-discount h2 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.inkomo-discount p {
+    font-size: 1.2em;
+}
+
+button, .btn {
+    background: gold;
+    color: black;
+    padding: 14px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background: #b8860b;
+    color: white;
+    box-shadow: 0 0 20px gold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid gold;
+    background: #1a1a1a;
+    color: gold;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #b8860b;
+    box-shadow: 0 0 10px rgba(255,215,0,0.5);
+    background: #2b1b0f;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==========================
+   ANIMATIONS
+========================== */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeIn {
+    0% { opacity: 0; transform: scale(0.98);}
+    100% { opacity: 1; transform: scale(1);}
 }
 
 /* ==========================
@@ -250,7 +355,96 @@ footer {
     border-top: 2px solid gold;
 }
 
+footer a {
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+footer a.btn, .footer a.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-right: 15px;
+    font-weight: bold;
+    gap: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+footer a.btn:hover {
+    background: #b8860b;
+    color: white;
+    box-shadow: 0 0 15px gold;
+}
+
+footer a.whatsapp-link {
+    background: #25D366;
+    color: white;
+}
+
+footer a.whatsapp-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #25D366;
+}
+
 .footer-actions svg {
     width: 24px;
     height: 24px;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .support-cards .card svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .packages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-actions {
+        flex-direction: column;
+    }
+
+    .logo-container img {
+        height: 50px;
+    }
+
+    .about h2 {
+        font-size: 2.2em;
+    }
+
+    .about-text {
+        font-size: 1em;
+    }
+
+    .mission-card svg, .pledge-card svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .leader-card img {
+        height: 200px;
+    }
 }
